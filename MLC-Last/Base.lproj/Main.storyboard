@@ -1,24 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Optima.ttc">
+            <string>Optima-Regular</string>
+        </array>
+        <array key="Savoye.ttc">
+            <string>SavoyeLetPlain</string>
+        </array>
+        <array key="TimesNewRomanItalic.ttf">
+            <string>TimesNewRomanPS-ItalicMT</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bucket" translatesAutoresizingMaskIntoConstraints="NO" id="UHc-3P-cgk" userLabel="bucket_l">
+                                <rect key="frame" x="20" y="572" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="9d4-OD-cpr"/>
+                                    <constraint firstAttribute="height" constant="75" id="B34-g2-dOb"/>
+                                    <constraint firstAttribute="width" secondItem="UHc-3P-cgk" secondAttribute="height" multiplier="1:1" id="ma7-C1-OOo"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bucket" translatesAutoresizingMaskIntoConstraints="NO" id="Huf-v6-Nj3" userLabel="bucket_r">
+                                <rect key="frame" x="280" y="572" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Huf-v6-Nj3" secondAttribute="height" multiplier="1:1" id="39U-5X-FVD"/>
+                                    <constraint firstAttribute="width" constant="75" id="DmB-da-ST0"/>
+                                    <constraint firstAttribute="height" constant="75" id="HtC-PH-nzk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="NU9-zK-aVw">
+                                <rect key="frame" x="20" y="550" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="L3w-bu-7dU"/>
+                                    <constraint firstAttribute="height" constant="75" id="NcH-1i-17Q"/>
+                                    <constraint firstAttribute="width" secondItem="NU9-zK-aVw" secondAttribute="height" multiplier="1:1" id="xjp-A1-8Dv"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="IoE-eK-EmM" appends="YES" id="ObN-HI-yPC"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gotgoblet" translatesAutoresizingMaskIntoConstraints="NO" id="tFD-dO-hRb">
+                                <rect key="frame" x="292" y="550" width="50" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="CIP-BI-z3u"/>
+                                    <constraint firstAttribute="width" secondItem="tFD-dO-hRb" secondAttribute="height" multiplier="2:3" id="OWq-D0-5h7"/>
+                                    <constraint firstAttribute="height" constant="75" id="ayT-da-UWy"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="mpD-lw-raH" appends="YES" id="uaw-DZ-vT5"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cerseipng1" translatesAutoresizingMaskIntoConstraints="NO" id="dtB-Y9-ryL">
+                                <rect key="frame" x="67" y="100" width="240" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="sV8-Sv-QYX"/>
+                                    <constraint firstAttribute="width" constant="240" id="ttE-qU-aEp"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9KG-Gp-McP" appends="YES" id="LVn-nD-V0U"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY LITTLE CERSEI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tcT-53-nlo">
+                                <rect key="frame" x="95" y="47" width="185" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="t37-xZ-FMG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="23"/>
+                                <color key="textColor" red="1" green="0.95880107800000003" blue="0.87481427739999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I29-lf-0ti">
+                                <rect key="frame" x="160" y="458" width="56" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ndg-74-Zab"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-ItalicMT" family="Times New Roman" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.95880107800000003" blue="0.87481427739999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uxR-dM-t6m" userLabel="Restfulness Progress View">
+                                <rect key="frame" x="112" y="631" width="150" height="2"/>
+                                <color key="backgroundColor" red="0.54363665800000005" green="0.40155860269999999" blue="0.18854125150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.95880107800000003" blue="0.87481427739999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restfulness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbN-AR-i6S">
+                                <rect key="frame" x="151" y="593" width="73" height="33"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="27"/>
+                                <color key="textColor" red="1" green="0.95880107800000003" blue="0.87481427739999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30699481870000001" green="0.2362037686" blue="0.18325150600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I29-lf-0ti" firstAttribute="top" secondItem="dtB-Y9-ryL" secondAttribute="bottom" constant="8" id="3S7-Bq-gI6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Huf-v6-Nj3" secondAttribute="bottom" constant="20" id="5WF-wU-jAq"/>
+                            <constraint firstItem="Huf-v6-Nj3" firstAttribute="top" secondItem="tFD-dO-hRb" secondAttribute="bottom" constant="-53" id="5ee-18-4NK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tFD-dO-hRb" secondAttribute="trailing" constant="33" id="911-hS-rVK"/>
+                            <constraint firstItem="uxR-dM-t6m" firstAttribute="top" secondItem="AbN-AR-i6S" secondAttribute="bottom" constant="4.5" id="ACl-I4-puW"/>
+                            <constraint firstItem="I29-lf-0ti" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="F0f-66-20p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uxR-dM-t6m" secondAttribute="bottom" constant="34.5" id="VSU-3A-C81"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Huf-v6-Nj3" secondAttribute="trailing" constant="20" id="aJl-l7-2K5"/>
+                            <constraint firstItem="tcT-53-nlo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="cQJ-pc-9Uy"/>
+                            <constraint firstItem="uxR-dM-t6m" firstAttribute="centerX" secondItem="dtB-Y9-ryL" secondAttribute="centerX" id="ecY-fU-UJi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UHc-3P-cgk" secondAttribute="bottom" constant="20" id="fBw-4n-3Ni"/>
+                            <constraint firstItem="UHc-3P-cgk" firstAttribute="top" secondItem="NU9-zK-aVw" secondAttribute="bottom" constant="-53" id="gHe-Ec-vxx"/>
+                            <constraint firstItem="AbN-AR-i6S" firstAttribute="centerX" secondItem="uxR-dM-t6m" secondAttribute="centerX" id="iY1-SC-BXy"/>
+                            <constraint firstItem="NU9-zK-aVw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="moI-r7-OEa"/>
+                            <constraint firstItem="dtB-Y9-ryL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="p5e-iz-cic"/>
+                            <constraint firstItem="uxR-dM-t6m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="pas-Y3-EYt"/>
+                            <constraint firstItem="UHc-3P-cgk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ta1-23-HiS"/>
+                            <constraint firstItem="tcT-53-nlo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xAk-iG-MBY"/>
+                            <constraint firstItem="dtB-Y9-ryL" firstAttribute="top" secondItem="tcT-53-nlo" secondAttribute="bottom" constant="23" id="xOB-67-7j2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cerseiImageView" destination="dtB-Y9-ryL" id="pjZ-6o-huV"/>
+                        <outlet property="coinView" destination="NU9-zK-aVw" id="FEk-g6-NsX"/>
+                        <outlet property="gobletView" destination="tFD-dO-hRb" id="EUI-dC-gZh"/>
+                        <outlet property="leftBucketView" destination="UHc-3P-cgk" id="HCB-ub-dMf"/>
+                        <outlet property="messageLabel" destination="I29-lf-0ti" id="HTf-rv-usa"/>
+                        <outlet property="restfulnessBarView" destination="uxR-dM-t6m" id="g8j-Ij-gTi"/>
+                        <outlet property="restfulnessLabel" destination="AbN-AR-i6S" id="uHk-yB-2Ke"/>
+                        <outlet property="rightBucketView" destination="Huf-v6-Nj3" id="kbF-xM-KRy"/>
+                        <outlet property="topLogoLabel" destination="tcT-53-nlo" id="BeL-Xa-5V6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="IoE-eK-EmM" userLabel="Coin Longpress">
+                    <connections>
+                        <action selector="coinLongPressed:" destination="BYZ-38-t0r" id="rfr-3T-5kl"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="mpD-lw-raH" userLabel="Wine Longpress">
+                    <connections>
+                        <action selector="gobletLongPressed:" destination="BYZ-38-t0r" id="JTN-3q-qRz"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="9KG-Gp-McP" userLabel="Cersei Pet">
+                    <connections>
+                        <action selector="cerseiPetted:" destination="BYZ-38-t0r" id="Y2r-fv-3cs"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bucket" width="273" height="297"/>
+        <image name="cerseipng1" width="1024" height="1534"/>
+        <image name="coin" width="200" height="200"/>
+        <image name="gotgoblet" width="198" height="375"/>
+    </resources>
 </document>
