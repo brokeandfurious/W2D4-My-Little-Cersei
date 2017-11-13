@@ -139,13 +139,17 @@
             [self.coinImageView removeFromSuperview];
             [self cerseiFaceImageNamed:@"cerseihappy"];
             [self cerseiMessage:@"Lannisters always pay their debts."];
-            [self cerseiStopsSleeping:[self cerseiStartsSleeping]];
+            if (self.isAsleep) {
+                [self cerseiStopsSleeping:[self cerseiStartsSleeping]];
+            }
         } else {
             [UIView animateWithDuration:2.0 animations:^{
                 self.coinImageView.center = CGPointMake(self.coinImageView.center.x, 1000);
                 [self cerseiFaceImageNamed:@"cerseigrumpy"];
                 [self cerseiMessage:@"Every breath you draw in my presence annoys me."];
-                [self cerseiStopsSleeping:[self cerseiStartsSleeping]];
+                if (self.isAsleep) {
+                    [self cerseiStopsSleeping:[self cerseiStartsSleeping]];
+                }
             }];
         }
     }
